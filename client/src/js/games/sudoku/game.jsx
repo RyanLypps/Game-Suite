@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Board from './board';
-import Header from './header';
-import NumberButton from './number';
+import Board from './Board';
+import Header from './Header';
+import NumberButton from './Number';
 import {
 	getSudoku
 } from 'fake-sudoku-puzzle-generator';
@@ -35,7 +35,6 @@ class Sudoku extends Component {
 	            }
 	        }
 	    }
-
 	    let solution = sudokus.solve(testSolution);
 	    this.setState({ testPuzzle: solution });
 	}

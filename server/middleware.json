@@ -38,7 +38,16 @@
       ]
     }
   },
-  "files": {},
+  "files": {
+    "loopback#static": [
+      {
+        "params": "$!../dist"
+      },
+      {
+        "params": "$!./public"
+      }
+    ]
+  },
   "final": {
     "loopback#urlNotFound": {}
   },

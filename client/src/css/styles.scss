@@ -1,13 +1,63 @@
+body {
+    background: rgb(130, 123, 123);
+    margin: 0px;
+}
+
 // Home Page
+
 
 // Header
 .default-header {
-    background: black;
+    border-bottom: white 2px solid;
+    background: rgb(82, 52, 52);
     color: white;
     font-size: 5em;
-    margin: -8px;
     letter-spacing: 2px;
     text-align: center;
+}
+
+.nav-bar {
+    height: 1.40em;
+    background-color: rgb(150, 71, 71);
+}
+
+.nav-button-container {
+    float: right;
+    margin-right: 20px;
+}
+
+.nav-buttons {
+    display: inline-block;
+    background-color: rgb(53, 33, 33);
+    color: white;
+    padding: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Opera and Firefox */
+
+    &:hover {
+        color: rgb(202, 146, 196);
+        box-shadow: 0 10px 10px 0 rgba(0,0,0,0.24);
+        opacity: .90;
+        border-color: rgb(0, 0, 0);
+        cursor: grab;
+      }
+
+    &:active {
+        opacity: 1;
+        transform: scale(1.25) translateY(5%);
+    }
+}
+
+.home-button {
+    margin-left: 50px;
 }
 
 // Logo
@@ -79,20 +129,3 @@ div[id^="2"] {
 div[id^="5"] {
     border-bottom: 2px solid black;
 }
-
-// @keyframes pulse {
-//     0% {
-//       transform: translate3d(0, 0, 0);
-  
-//     }
-    
-//     25% {
-//       transform: translate3d(100px, 0, 0);
-//       transform: scale(1.50) translateY(5%);
-//     }
-//   }
-  
-//   .pulse {
-//     animation: pulse 1000ms;
-//     animation-iteration-count: infinite;
-//   }

@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import Board from './Board';
-import Header from './Header';
+import SudokuHeader from './Header';
 import NumberButton from './Number';
 import {
 	getSudoku
 } from 'fake-sudoku-puzzle-generator';
 import sudokus from 'sudokus';
+import Header from '../../header/Header';
 
 class Sudoku extends Component {
 	constructor(props) {
@@ -131,7 +132,8 @@ class Sudoku extends Component {
 	render() {
 		return (
 			<div className='sudokuContainer'>
-				<Header
+				<Header />
+				<SudokuHeader
 					generatePuzzle={this.generatePuzzle}
 				/>
 				<br />

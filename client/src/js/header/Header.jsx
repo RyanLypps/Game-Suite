@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 import Logo from '../../assets/logo.png';
+import { Link } from 'react-router-dom';
 
 class Header extends Component {
 
   render() {
     return (
       <div>
-        <a href='/'>
+        <Link to={'/'}>
           <img className='logo' src={Logo} />
-        </a>
+        </Link>
         <div className='default-header'>
           <span>Affinity</span>
           <span>Gaming</span>
@@ -20,7 +21,7 @@ class Header extends Component {
             <div className='nav-buttons'>Login</div>
           </div>
         </div>
-      </div >
+      </div>
     );
   }
 }

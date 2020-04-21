@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class Header extends React.Component {
+export default class SudokuHeader extends React.Component {
 	constructor(props) {
 		super(props);
 

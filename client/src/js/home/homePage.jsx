@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Header from '../header/Header';
 import { Link } from 'react-router-dom';
 import images from '../../assets/games/*.png';
 
@@ -22,7 +21,6 @@ export default class HomePage extends Component {
 
 		return (
 			<div className='home-container'>
-				<Header />
 				<div className='game-container'>
 					{this.state.games.map(game => {
 						keyCounter++;

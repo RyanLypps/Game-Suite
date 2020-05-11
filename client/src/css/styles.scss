@@ -191,6 +191,10 @@ body {
   background: red;
 }
 
+.checkers-square.selected {
+  background: blue;
+}
+
 .player-one-piece {
   border: 1px solid rgb(148, 148, 148);
   background: black;

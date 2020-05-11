@@ -17,7 +17,14 @@ export default (props) => (
 		props.playerTwoPieces.filter(a => a.x == props.id.charAt(0) && a.y == props.id.charAt(1))[0] != undefined &&
 		props.selected.x == props.playerTwoPieces.filter(a => a.x == props.id.charAt(0) && a.y == props.id.charAt(1))[0].x &&
 		props.selected.y == props.playerTwoPieces.filter(a => a.x == props.id.charAt(0) && a.y == props.id.charAt(1))[0].y	
-			? 'checkers-square ' + 'selected' :
+			? 
+		'checkers-square ' + 'selected' :
+		props.selected &&
+		props.selected.selected == true &&
+		props.moveableSquares != undefined &&
+		props.moveableSquares.filter(a => a.x == props.id.charAt(0) && a.y == props.id.charAt(1)).length == 1
+		?
+		'checkers-square ' + 'moveable':
 		'checkers-square ' + props.background} 
 	id={props.id}
 	onClick={
@@ -25,6 +32,11 @@ export default (props) => (
 		props.selectPiece : 
 		props.playerOneTurn == false && props.playerTwoPieces != undefined && props.playerTwoPieces.filter(a => a.x == props.id.charAt(0) && a.y == props.id.charAt(1)).length == 1 ?
 		props.selectPiece :
+		props.selected &&
+		props.selected.selected == true &&
+		props.moveableSquares != undefined &&
+		props.moveableSquares.filter(a => a.x == props.id.charAt(0) && a.y == props.id.charAt(1)).length == 1 ?
+		props.submitMove :
 		null
 		}
 	>

@@ -6,11 +6,17 @@ export default class Board extends React.Component {
     super(props);
 
     this.selectPiece = this.selectPiece.bind(this);
+    this.submitMove = this.submitMove.bind(this);
   }
 
   selectPiece(e) {
-    this.props.selectPiece(e.target.id)
+    this.props.selectPiece(e.target.id);
   }
+
+  submitMove(e) {
+    this.props.submitMove(e.target.id);
+  }
+
 
   renderSquare() {
     let segment = [];
@@ -30,6 +36,8 @@ export default class Board extends React.Component {
             selectPiece={this.selectPiece}
             playerOneTurn={this.props.playerOneTurn}
             selected={this.props.selected}
+            moveableSquares={this.props.moveableSquares}
+            submitMove={this.submitMove}
             key={count}
           />);
         } else {

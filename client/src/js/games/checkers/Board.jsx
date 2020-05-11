@@ -19,6 +19,8 @@ export default class Board extends React.Component {
             j={j}
             id={'' + i + j}
             background={'red'}
+            playerOnePieces={this.props.playerOnePieces}
+            playerTwoPieces={this.props.playerTwoPieces}
             key={count}
           />);
         } else if (i % 2 != 0 && j % 2 == 0) {
@@ -27,6 +29,8 @@ export default class Board extends React.Component {
             j={j}
             id={'' + i + j}
             background={'red'}
+            playerOnePieces={this.props.playerOnePieces}
+            playerTwoPieces={this.props.playerTwoPieces}
             key={count}
           />);
         } else {
@@ -34,7 +38,7 @@ export default class Board extends React.Component {
             i={i}
             j={j}
             id={'' + i + j}
-            background={'white'}
+            background={'black'}
             key={count}
           />);
         }

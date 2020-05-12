@@ -36,7 +36,8 @@ class Checkers extends React.Component {
         selected: false,
         x: -1,
         y: -1
-      }
+      },
+      playerOneTurn: true
     })
   }
 

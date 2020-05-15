@@ -6,7 +6,6 @@ import {
 	getSudoku
 } from 'fake-sudoku-puzzle-generator';
 import sudokus from 'sudokus';
-import Header from '../../header/Header';
 
 class Sudoku extends Component {
 	constructor(props) {
@@ -132,7 +131,6 @@ class Sudoku extends Component {
 	render() {
 		return (
 			<div className='sudokuContainer'>
-				<Header />
 				<SudokuHeader
 					generatePuzzle={this.generatePuzzle}
 				/>

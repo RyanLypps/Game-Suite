@@ -40,9 +40,17 @@ export default (props) => (
 		null
 		}
 	>
-		{props.playerOnePieces != undefined && props.playerOnePieces.filter(a => a.x == props.id.charAt(0) && a.y == props.id.charAt(1)).length == 1 ? <Pieces playerOne={true} id={props.id} /> 
+		{props.playerOnePieces != undefined && props.playerOnePieces.filter(a => a.x == props.id.charAt(0) && a.y == props.id.charAt(1) && a.king == false).length == 1 
+		? <Pieces playerOne={true} id={props.id} king={false}/> 
 		: 
-		props.playerTwoPieces != undefined && props.playerTwoPieces.filter(a => a.x == props.id.charAt(0) && a.y == props.id.charAt(1)).length == 1 ? <Pieces playerTwo={true} id={props.id}/> 
+		props.playerOnePieces != undefined && props.playerOnePieces.filter(a => a.x == props.id.charAt(0) && a.y == props.id.charAt(1) && a.king == true).length == 1 
+		? <Pieces playerOne={true} id={props.id} king={true}/>
+		:
+		props.playerTwoPieces != undefined && props.playerTwoPieces.filter(a => a.x == props.id.charAt(0) && a.y == props.id.charAt(1) && a.king == false).length == 1 
+		? <Pieces playerTwo={true} id={props.id} king={false}/>
+		:
+		props.playerTwoPieces != undefined && props.playerTwoPieces.filter(a => a.x == props.id.charAt(0) && a.y == props.id.charAt(1) && a.king == true).length == 1 
+		? <Pieces playerTwo={true} id={props.id} king={true} /> 
 		: ''}
 	</div >
 );

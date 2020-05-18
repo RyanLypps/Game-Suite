@@ -214,3 +214,20 @@ body {
   width: 4.50vmin;
   height: 4.50vmin;
 }
+
+.player-one-piece-king {
+  border: 1px solid rgb(148, 148, 148);
+  background: black;
+  border-radius: 50%;
+  width: 4.50vmin;
+  height: 4.50vmin;
+}
+
+.player-two-piece-king {
+  border: 1px solid rgb(0, 0, 0);
+  background: rgb(247, 234, 234);
+  border-radius: 50%;
+  width: 4.50vmin;
+  height: 4.50vmin;
+  color: black;
+}
